@@ -1,0 +1,27 @@
+cabal-version:      2.4
+name:               my-extra
+version:            0.1.0
+
+-- A short (one-line) description of the package.
+-- synopsis:
+
+-- A longer description of the package.
+-- description:
+
+-- A URL where users can report bugs.
+-- bug-reports:
+
+-- The license under which the package is released.
+-- license:
+author:             Dathan Ault-McCoy
+-- maintainer:         dsam10@icloud.com
+
+-- A copyright notice.
+-- copyright:
+-- category:
+extra-source-files: CHANGELOG.md
+
+library
+    exposed-modules:  Extra
+    build-depends:    base ^>=4.16
+    default-language: Haskell2010
