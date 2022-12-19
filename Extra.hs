@@ -24,6 +24,11 @@ infixr 3 ***, &&&
 infixr 8 .*, .**, .***, .****, .*****
 infixr 8 &., &.*, &.**, &.***, &.****, &.*****
 
+iterateM :: Monad m => (a -> m a) -> a -> m [a]
+iterateM f x = do
+    x' <- f x
+    (x':) <$> iterateM f x'
+
 (?) :: Bool -> a -> Maybe a
 b ? x = if b then Just x else Nothing
 
